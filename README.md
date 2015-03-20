@@ -21,3 +21,22 @@ $pdf = new PDFInfo('path/to/the/pdf');
 echo $pdf->title; // Get the title
 echo $pdf->pages; // Get the number of pages
 ```
+
+# Reference
+
+Currently this library supports the following metadata:
+
+* title;
+* author;
+* creator;
+* producer;
+* creationDate;
+* modDate;
+* tagged;
+* form;
+* pages;
+* encrypted;
+* pageSize;
+* fileSize;
+* optimized;
+* PDFVersion;
