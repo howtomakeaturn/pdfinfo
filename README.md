@@ -26,17 +26,17 @@ echo $pdf->pages; // Get the number of pages
 
 Currently this library supports the following metadata:
 
-* title;
-* author;
-* creator;
-* producer;
-* creationDate;
-* modDate;
-* tagged;
-* form;
-* pages;
-* encrypted;
-* pageSize;
-* fileSize;
-* optimized;
-* PDFVersion;
+* title
+* author
+* creator
+* producer
+* creationDate
+* modDate
+* tagged
+* form
+* pages
+* encrypted
+* pageSize
+* fileSize
+* optimized
+* PDFVersion
