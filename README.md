@@ -15,6 +15,7 @@ sudo apt-get install popper-utils
 
 
 # Usage
+Just pass the path to the pdf file to the constructor, and you can get metadata from its properties immediately:
 
 ```php
 $pdf = new PDFInfo('path/to/the/pdf');
