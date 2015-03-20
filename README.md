@@ -12,7 +12,10 @@ sudo apt-get install popper-utils
 ```
 
 ## 2. Install the library
-
+You can just download the file to your project, or install it via composer:
+```
+composer require "howtomakeaturn/pdfinfo:1.*"
+```
 
 # Usage
 Just pass the path to the pdf file to the constructor, and you can get metadata from its properties immediately:
