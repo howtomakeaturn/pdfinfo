@@ -9,8 +9,6 @@ $whoops->register();
 
 $pdf = new PDFInfo('files/DDD.pdf');
 
-#echo var_dump($pdf->output);
-
 echo $pdf->title;
 echo '<hr />';
 echo $pdf->author;
