@@ -1,4 +1,4 @@
-Very simple wrapper to the pdfinfo unix tool.
+Simple wrapper to the pdfinfo unix tool.
 
 # Installation
 
