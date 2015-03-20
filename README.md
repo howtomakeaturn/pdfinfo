@@ -1,4 +1,4 @@
-Simple wrapper to the pdfinfo unix tool.
+Simple PHP wrapper to the pdfinfo unix tool.
 
 # Installation
 
