@@ -18,6 +18,6 @@ sudo apt-get install popper-utils
 
 ```php
 $pdf = new PDFInfo('path/to/the/pdf');
-echo $pdf->title;
-echo $pdf->pages;
+echo $pdf->title; // Get the title
+echo $pdf->pages; // Get the number of pages
 ```
