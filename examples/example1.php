@@ -9,4 +9,33 @@ $whoops->register();
 
 $pdf = new PDFInfo('files/DDD.pdf');
 
+#echo var_dump($pdf->output);
+
+echo $pdf->title;
+echo '<hr />';
+echo $pdf->author;
+echo '<hr />';
+echo $pdf->creator;
+echo '<hr />';
+echo $pdf->producer;
+echo '<hr />';
+echo $pdf->creationDate;
+echo '<hr />';
+echo $pdf->modDate;
+echo '<hr />';
+echo $pdf->tagged;
+echo '<hr />';
+echo $pdf->form;
+echo '<hr />';
 echo $pdf->pages;
+echo '<hr />';
+echo $pdf->encrypted;
+echo '<hr />';
+echo $pdf->pageSize;
+echo '<hr />';
+echo $pdf->fileSize;
+echo '<hr />';
+echo $pdf->optimized;
+echo '<hr />';
+echo $pdf->PDFVersion;
+echo '<hr />';

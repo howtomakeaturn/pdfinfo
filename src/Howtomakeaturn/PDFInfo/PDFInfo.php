@@ -1,5 +1,6 @@
 <?php
 namespace Howtomakeaturn\PDFInfo;
+
 /*
 * Inspired by http://stackoverflow.com/questions/14644353/get-the-number-of-pages-in-a-pdf-document/14644354
 * @author howtomakeaturn
@@ -9,10 +10,21 @@ class PDFInfo
 {
     protected $file;
     public $output;
-
+    
+    public $title;
+    public $author;
+    public $creator;
+    public $producer;
+    public $creationDate;
+    public $modDate;
+    public $tagged;
+    public $form;
     public $pages;
-    #protected $title;
-    #protected $author;
+    public $encrypted;
+    public $pageSize;
+    public $fileSize;
+    public $optimized;
+    public $PDFVersion;
 
     public function __construct($file)
     {
@@ -25,7 +37,7 @@ class PDFInfo
     
     public function loadOutput()
     {
-        $cmd = "/usr/bin/pdfinfo";           // Linux
+        $cmd = "pdfinfo";           // Linux
 
         $file = $this->file;
         // Parse entire output
@@ -37,7 +49,20 @@ class PDFInfo
 
     private function parseOutput()
     {
+        $this->title = $this->parse('Title');
+        $this->author = $this->parse('Author');
+        $this->creator = $this->parse('Creator');
+        $this->producer = $this->parse('Producer');
+        $this->creationDate = $this->parse('CreationDate');
+        $this->modDate = $this->parse('ModDate');
+        $this->tagged = $this->parse('Tagged');
+        $this->form = $this->parse('Form');
         $this->pages = $this->parse('Pages');
+        $this->encrypted = $this->parse('Encrypted');
+        $this->pageSize = $this->parse('Page size');
+        $this->fileSize = $this->parse('File size');
+        $this->optimized = $this->parse('Optimized');
+        $this->PDFVersion = $this->parse('PDF version');
     }
         
     private function parse($attribute)
@@ -47,7 +72,7 @@ class PDFInfo
         foreach($this->output as $op)
         {
             // Extract the number
-            if(preg_match("/" . $attribute . ":\s*(\d+)/i", $op, $matches) === 1)
+            if(preg_match("/" . $attribute . ":\s*(.+)/i", $op, $matches) === 1)
             {
                 $result = $matches[1];
                 break;
@@ -58,26 +83,3 @@ class PDFInfo
     }
     
 }
-
-/*
-    static public function load()
-    {
-        $pdfInfo = new self();
-        
-        
-Title:          test1.pdf
-Author:         John Smith
-Creator:        PScript5.dll Version 5.2.2
-Producer:       Acrobat Distiller 9.2.0 (Windows)
-CreationDate:   01/09/13 19:46:57
-ModDate:        01/09/13 19:46:57
-Tagged:         yes
-Form:           none
-Pages:          13    <-- This is what we need
-Encrypted:      no
-Page size:      2384 x 3370 pts (A0)
-File size:      17569259 bytes
-Optimized:      yes
-PDF version:    1.6    
-    }
-*/
