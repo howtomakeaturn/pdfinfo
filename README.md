@@ -2,6 +2,14 @@ Simple PHP wrapper to the pdfinfo unix tool.
 
 Inspired by http://stackoverflow.com/questions/14644353/get-the-number-of-pages-in-a-pdf-document/14644354
 
+# What is pdfinfo
+
+pdfinfo is an unix tool helping extract information from pdf files.
+
+http://linux.about.com/library/cmd/blcmdl1_pdfinfo.htm
+
+You can get page count, title, author..etc via the tool.
+
 # Installation
 
 ## 1. Install pdfinfo
