@@ -1,8 +1,8 @@
 {
-    "name": "",
+    "name": "howtomakeaturn/pdfinfo",
     "type": "library",
-    "description": "",
-    "keywords": [],
+    "description": "simple php wrapper for pdfinfo",
+    "keywords": ["pdf", "pdfinfo"],
     "require-dev": {
       "filp/whoops": "1.1.4"
     },
