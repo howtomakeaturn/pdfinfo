@@ -39,10 +39,10 @@ class PDFInfo
     {
         $cmd = "pdfinfo";           // Linux
 
-        $file = $this->file;
+        $file = escapeshellarg($this->file);
         // Parse entire output
         // Surround with double quotes if file name has spaces
-        exec("$cmd \"$file\"", $output);
+        exec("$cmd $file", $output);
         
         $this->output = $output;
     }
