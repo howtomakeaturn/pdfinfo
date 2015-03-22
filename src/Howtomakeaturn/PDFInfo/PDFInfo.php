@@ -44,8 +44,14 @@ class PDFInfo
         // Surround with double quotes if file name has spaces
         exec("$cmd $file", $output, $returnVar);
         
-        if ( $returnVar !== 0 ){
-            throw new Exceptions\BaseException();
+        if ( $returnVar === 1 ){
+            throw new Exceptions\OpenPDFException();
+        } else if ( $returnVar === 2 ){
+            throw new Exceptions\OpenOutputException();
+        } else if ( $returnVar === 3 ){
+            throw new Exceptions\PDFPermissionException();            
+        } else if ( $returnVar === 99 ){
+            throw new Exceptions\OtherException();                        
         }
         
         $this->output = $output;

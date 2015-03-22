@@ -3,4 +3,4 @@ namespace Howtomakeaturn\PDFInfo\Exceptions;
 
 use \Exception;
 
-class BaseException extends Exception{};
+class OtherException extends Exception{};
