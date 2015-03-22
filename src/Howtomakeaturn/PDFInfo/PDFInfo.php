@@ -42,7 +42,11 @@ class PDFInfo
         $file = escapeshellarg($this->file);
         // Parse entire output
         // Surround with double quotes if file name has spaces
-        exec("$cmd $file", $output);
+        exec("$cmd $file", $output, $returnVar);
+        
+        if ( $returnVar !== 0 ){
+            throw new Exceptions\BaseException();
+        }
         
         $this->output = $output;
     }
