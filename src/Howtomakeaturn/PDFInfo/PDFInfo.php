@@ -35,7 +35,7 @@ class PDFInfo
         $this->parseOutput();        
     }
     
-    public function loadOutput()
+    private function loadOutput()
     {
         $cmd = "pdfinfo";           // Linux
 
