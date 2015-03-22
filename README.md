@@ -14,7 +14,7 @@ You can get page count, title, author..etc via the tool.
 
 ## 1. Install pdfinfo
 
-First you need to have phpinfo in your system.
+First you need to have pdfinfo in your system.
 
 For ubuntu, there's an easy way for doing this:
 ```
