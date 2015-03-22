@@ -36,6 +36,17 @@ echo $pdf->title; // Get the title
 echo $pdf->pages; // Get the number of pages
 ```
 
+# Exceptions
+This library throws 4 kind of exceptions to represnet the official exit codes.
+* OpenPDFException    
+* OpenOutputException
+* PDFPermissionException
+* OtherException
+
+Check the [official documentation](http://linux.about.com/library/cmd/blcmdl1_pdfinfo.htm) for more information.
+
+
+
 # Reference
 
 Currently this library supports the following metadata:
