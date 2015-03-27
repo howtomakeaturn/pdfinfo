@@ -3,6 +3,7 @@
     "type": "library",
     "description": "simple php wrapper for pdfinfo",
     "keywords": ["pdf", "pdfinfo"],
+    "license": "MIT",
     "require-dev": {
       "filp/whoops": "1.1.4"
     },
