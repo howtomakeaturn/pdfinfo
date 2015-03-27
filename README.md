@@ -37,7 +37,7 @@ echo $pdf->pages; // Get the number of pages
 ```
 
 # Exceptions
-This library throws 4 kind of exceptions to represnet the official exit codes.
+This library throws 4 kind of exceptions to represent the official exit codes.
 * OpenPDFException    
 * OpenOutputException
 * PDFPermissionException
