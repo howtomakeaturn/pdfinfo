@@ -18,7 +18,7 @@ First you need to have pdfinfo in your system.
 
 For ubuntu, there's an easy way for doing this:
 ```
-sudo apt-get install popper-utils
+sudo apt-get install poppler-utils
 ```
 
 ## 2. Install the library
