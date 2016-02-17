@@ -26,6 +26,8 @@ class PDFInfo
     public $optimized;
     public $PDFVersion;
 
+    public static $bin;
+
     public function __construct($file)
     {
         $this->file = $file;
@@ -35,9 +37,18 @@ class PDFInfo
         $this->parseOutput();        
     }
     
+    public function getBinary() 
+    {
+        if (empty(static::$bin)) {
+            static::$bin = getenv('PDFINFO_BIN') ?: 'pdfinfo';
+        }
+
+        return static::$bin;
+    }
+
     private function loadOutput()
     {
-        $cmd = "pdfinfo";           // Linux
+        $cmd = escapeshellcmd($this->getBinary());           
 
         $file = escapeshellarg($this->file);
         // Parse entire output
