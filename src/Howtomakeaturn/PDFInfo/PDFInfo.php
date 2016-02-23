@@ -48,7 +48,7 @@ class PDFInfo
 
     private function loadOutput()
     {
-        $cmd = escapeshellcmd($this->getBinary());           
+        $cmd = escapeshellarg($this->getBinary()); // escapeshellarg to work with Windows paths with spaces.
 
         $file = escapeshellarg($this->file);
         // Parse entire output
