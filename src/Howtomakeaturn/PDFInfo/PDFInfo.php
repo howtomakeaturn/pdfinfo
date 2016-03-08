@@ -40,7 +40,7 @@ class PDFInfo
     public function getBinary() 
     {
         if (empty(static::$bin)) {
-            static::$bin = getenv('PDFINFO_BIN') ?: 'pdfinfo';
+            static::$bin = trim(trim(getenv('PDFINFO_BIN'), '\\/" \'')) ?: 'pdfinfo';
         }
 
         return static::$bin;
