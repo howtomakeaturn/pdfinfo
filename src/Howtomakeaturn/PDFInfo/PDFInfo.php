@@ -84,6 +84,7 @@ class PDFInfo
         $this->fileSize = $this->parse('File size');
         $this->optimized = $this->parse('Optimized');
         $this->PDFVersion = $this->parse('PDF version');
+        $this->rot = $this->parse('Page rot');
     }
         
     private function parse($attribute)
