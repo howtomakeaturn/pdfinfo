@@ -65,3 +65,4 @@ Currently this library supports the following metadata:
 * fileSize
 * optimized
 * PDFVersion
+* pageRot
