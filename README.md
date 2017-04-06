@@ -6,7 +6,7 @@ Inspired by http://stackoverflow.com/questions/14644353/get-the-number-of-pages-
 
 pdfinfo is an unix tool helping extract information from pdf files.
 
-http://linux.about.com/library/cmd/blcmdl1_pdfinfo.htm
+http://linuxcommand.org/man_pages/pdfinfo1.html
 
 You can get page count, title, author..etc via the tool.
 
@@ -43,7 +43,7 @@ This library throws 4 kind of exceptions to represent the official exit codes.
 * PDFPermissionException
 * OtherException
 
-Check the [official documentation](http://linux.about.com/library/cmd/blcmdl1_pdfinfo.htm) for more information.
+Check the [official documentation](http://linuxcommand.org/man_pages/pdfinfo1.html) for more information.
 
 
 
