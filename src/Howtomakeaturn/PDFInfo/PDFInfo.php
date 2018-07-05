@@ -63,6 +63,8 @@ class PDFInfo
             throw new Exceptions\PDFPermissionException();
         } else if ( $returnVar === 99 ){
             throw new Exceptions\OtherException();
+        } else if ( $returnVar === 127 ){
+            throw new Exceptions\CommandNotFoundException();
         }
 
         $this->output = $output;
