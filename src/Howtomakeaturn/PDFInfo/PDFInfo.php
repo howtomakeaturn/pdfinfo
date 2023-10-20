@@ -25,6 +25,7 @@ class PDFInfo
     public $fileSize;
     public $optimized;
     public $PDFVersion;
+    public $pageRot;
 
     public static $bin;
 
